@@ -2,23 +2,23 @@ import React from 'react'
 import './Hero.css'
 import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow.png'
-import hero_image from '../Assets/hero_image.png'
+import hero_image from '../Assets1/Hero_photo.png'
 
 const Hero = () => {
 return (
     <div className='hero'>
         <div className="hero-left">
-            <h2>New Arrivals Only</h2>
+            <h2>WE PROVIDE YOU</h2>
             <div>
                 <div className="hero-hand-icon">
-                    <p>New</p>
+                    <p>WITH THE BEST</p>
                     <img src={hand_icon} alt="" />
                 </div>
-                <p>collections</p>
-                <p>for everyone</p>
+                <p>PAINTS IN</p>
+                <p>TOWN</p>
             </div>
             <div className="hero-latest-btn">
-                <div>Latest Collection</div>
+                <div>Read More</div>
                 <img src={arrow_icon} alt="" />
             </div>
         </div>
