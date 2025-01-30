@@ -30,7 +30,7 @@
 .listproduct-remove-icon{
     cursor: pointer;
     margin: auto;
-    background: black;
+    width: auto;
 }
 
 

@@ -2,14 +2,15 @@ import './AddProduct.css'
 import { useState} from 'react'
 import upload_area from '../../assets/hand_icon.png'
 
+
 const AddProduct = () => {
     const [image,setImage] = useState(false);
     const [productDetails,setProductDetails] = useState({
         name:'',
         image:'',
-        category: 'women',
-        new_price: '',
-        old_price: '',
+        category: 'interior',
+        price: '',
+        description: '',
 
     });
 
@@ -66,23 +67,26 @@ const AddProduct = () => {
         <div className="addproduct-price">
             <div className="addproduct-itemfield">
                 <p>Price</p>
-                <input value={productDetails.old_price} onChange={changeHandler}type="text" name='old_price' placeholder='Type Here' />
-            </div>
-            <div className="addproduct-itemfield">
-                <p>Offer Price</p>
-                <input value={productDetails.new_price} onChange={changeHandler}type="text" name='new_price' placeholder='Type Here' />
+                <input value={productDetails.price} onChange={changeHandler}type="text" name='price' placeholder='Type Here' />
             </div>
         </div>
+        
         <div className="addproduct-itemfield">
             <p>Product Category</p>
             <select value={productDetails.category} onChange={changeHandler} name="category" className='add-product-selector'>
-                <option value="women">Women</option>
-                <option value="men">Men</option>
-                <option value="Kid">Kid</option>
+                <option value="interior">Interior</option>
+                <option value="exterior">Exterior</option>
+                <option value="primers">Primers</option>
+                <option value="finishes">Finishes</option>
             </select>
         </div>
         <div className="addproduct-itemfield">
+                <p>Product Description</p>
+                <input value={productDetails.description} onChange={changeHandler}type="text" name='description' placeholder='Type Here' />
+            </div>
+        <div className="addproduct-itemfield">
             <label htmlFor="file-input">
+                <p>Upload area</p>
                 <img src={image?URL.createObjectURL(image):upload_area} alt=""  className='addproduct-thumbnail-input'/>
             </label>
             <input onChange={imageHandler} type="file" name='image' id='file-input' hidden />

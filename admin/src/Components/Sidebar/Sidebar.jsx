@@ -1,27 +1,28 @@
-import './Sidebar.css'
-import {Link} from 'react-router-dom'
-import add_product_icon from '../..//assets/hand_icon.png'
-import list_product_icon from '../../assets/hand_icon.png'
+import './Sidebar.css';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faList } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-        <Link to={'/addproduct'} style={{textDecoration: 'none'}}>
+      <Link to={'/addproduct'} style={{ textDecoration: 'none' }}>
         <div className='sidebarItem'>
-            <img src={add_product_icon} alt='add product' className='sidebarIcon' />
-            <p>Add Product</p>
+          <FontAwesomeIcon icon={faPlus} className='sidebarIcon' />
+          <p>Add Product</p>
         </div>
-        </Link>
+      </Link>
 
-        <Link to={'/listproduct'} style={{textDecoration: 'none'}}>
+      <Link to={'/listproduct'} style={{ textDecoration: 'none' }}>
         <div className='sidebarItem'>
-            <img src={list_product_icon} alt='add product' className='sidebarIcon' />
-            <p>Product List</p>
+          <FontAwesomeIcon icon={faList} className='sidebarIcon' />
+          <p>Product List</p>
         </div>
-        </Link>
-      
+      </Link>
+
+
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
